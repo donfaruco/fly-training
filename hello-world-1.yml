@@ -2,7 +2,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: git@github.com:donfaruco/fly-training.git
+    uri: https://github.com/donfaruco/fly-training.git
 
 jobs:
 - name: hello-world-job
