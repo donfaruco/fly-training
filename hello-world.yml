@@ -1,0 +1,40 @@
+jobs:
+- name: hello-world-job
+  plan: 
+  - task: hello-world-task
+    config:
+    # Tells concourse which type of worker this task shour run on
+      platform: linux
+      # This is one way of telling concourse which container image to use of a
+      # task.  We'll explain this more when talking about resourdces
+      image_resource: 
+        type: registry-image
+        source:
+          repository: alpine # images are pulled from docker hub by defatult
+      # The command Concourse will run inside the container
+      # echo "Hello World"
+      outputs:
+      - name: the-artifact
+      run:
+        path: sh
+        args:
+        - -cx
+        - |
+          ls -l .
+          echo "hello form another step" > the-artifact/message
+  - task: read-the-artifact
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source:
+          repository: alpine
+      inputs:
+      - name: the-artifact
+      run:
+        path: sh
+        args:
+        - -cx
+        - |
+          ls -l .
+          cat the-artifact/message
