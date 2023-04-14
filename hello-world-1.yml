@@ -16,6 +16,8 @@ jobs:
         type: registry-image
         source:
           repository: alpine
+      inputs:
+      - name: repo
       run:
-        path: echo
-        args: ["De sa so vispo constantino poli palomar!"]
+        path: cat
+        args: ["repo/README.md"]
