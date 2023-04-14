@@ -19,5 +19,5 @@ jobs:
       inputs:
       - name: repo
       run:
-        path: cat
-        args: ["repo/README.md"]
+        path: echo
+        args: ["Faruco Nalgas de Cuco"]
