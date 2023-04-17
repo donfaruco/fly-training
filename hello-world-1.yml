@@ -2,22 +2,91 @@ resources:
 - name: repo
   type: git
   source:
-    uri: https://github.com/donfaruco/fly-training.git
+    #uri: https://github.com/donfaruco/fly-training.git
+    uri: git@github.com:donfaruco/fly-training.git
+    branch: master
+    private_key: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    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
+    2RgQMNxVDcD4Slt8ZfeZuJ4aY=
+    -----END OPENSSH PRIVATE KEY-----
 
 jobs:
 - name: hello-world-job
   plan:
   - get: repo
     trigger: true
-  - task: hello-world-task
+  - task: create-commit
     config:
       platform: linux
       image_resource:
         type: registry-image
         source:
-          repository: busybox
+          repository: gitea/gitea
       inputs:
       - name: repo
+      outputs:
+      - name: repo
+      params:
+        EMAIL: donfarudo@gmail.com
+        GIT_AUTHUR_NAME: Don Faruco 
       run:
-        path: cat
-        args: ["repo/README.md"]
+        path: sh
+        args:
+        - -cx
+        - |
+          cd repo
+          date +%Y-%m-%d > todays-date
+          git add ./todays-date
+          git config --global user.email $EMAIL
+          git config --global user.name $GIT_AUTHOR_NAME
+          git commit -m "Update todays date"
+  - put: repo
+    params:
+      repository: repo
